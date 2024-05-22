@@ -1,5 +1,5 @@
 {
-    "semi": true, // Specify if you want to print semicolons at the end of statements
-    "singleQuote": true, // If you want to use single quotes
+    "semi": true,
+    "singleQuote": true
     
   }

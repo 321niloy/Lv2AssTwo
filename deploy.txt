@@ -1,0 +1,19 @@
+npm i -g vercel
+vercel -v
+vercel login
+vercel --prod
+
+Inspect: https://vercel.com/niloys-projects-0aab42c9/lvtwoassignmenttwo/J4WRbk1r1aWNvw6G2bKmyzqwLyww 
+After the going Inspect link we saw domain link
+
+without Install process////////////////////
+
+npx vercel login
+
+npx vercel --prod
+
+Inspect: https://vercel.com/niloys-projects-0aab42c9/lvtwoassignmenttwo/J4WRbk1r1aWNvw6G2bKmyzqwLyww 
+After the going Inspect link we saw domain link
+
+
+Github/////////

@@ -1,3 +1,4 @@
 no_modules
 dist
 .env
+.vercel

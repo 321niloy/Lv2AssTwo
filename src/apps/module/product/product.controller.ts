@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Request, Response } from 'express';
 import { Productservice } from './product.service';
 import {
@@ -17,11 +18,11 @@ const createProduct = async (req: Request, res: Response) => {
       message: 'Product created successfully!',
       data: result,
     });
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).json({
       success: false,
       messeage: error || 'Oops!! Product unSuccessfully Created',
-      data: error,
+      data: error.message,
     });
   }
 };
@@ -49,11 +50,11 @@ const getProducts = async (req: Request, res: Response) => {
       message: 'Products fetched successfully',
       data: result,
     });
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).json({
       success: false,
       messege: error || 'Oops!! Product unSuccessfully Created',
-      data: error,
+      data: error.message,
     });
   }
 };
@@ -76,11 +77,11 @@ const getSingleProduct = async (req: Request, res: Response) => {
         data: result,
       });
     }
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).json({
       success: false,
       message: 'Opps Single Product can not successfully fetched',
-      data: error,
+      data: error.message,
     });
   }
 };
@@ -98,11 +99,11 @@ const updateSingelProduct = async (req: Request, res: Response) => {
       message: 'Product updated successfully!',
       data: result,
     });
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).json({
       success: false,
       message: 'Updated Error',
-      data: error,
+      data: error.message,
     });
   }
 };
@@ -117,11 +118,11 @@ const DeleteSingelProduct = async (req: Request, res: Response) => {
       message: 'Product deleted successfully!',
       data: null || result,
     });
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).json({
       seccess: false,
       message: 'Oops!! Data not Deleted',
-      data: error,
+      data: error.message,
     });
   }
 };

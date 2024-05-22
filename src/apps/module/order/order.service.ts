@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { Torder } from './order.interface';
 import order from '../order.model';
 import product from '../product.model';
@@ -25,10 +27,10 @@ const createOrderIntoDb = async (data: Torder) => {
 
     await oneProduct.save();
     return result;
-  } catch (error) {
+  } catch (error: any) {
     throw {
       success: false,
-      message: error
+      message: error.message,
     };
   }
 };
